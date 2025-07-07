@@ -38,7 +38,7 @@ struct MainTabView: View {
                 }
                 .tag(3)
 
-            ProfileView()
+            BookmarkView()
                 .tabItem {
                     Image("bookmarkUnSelect")
                     Text("Profile")

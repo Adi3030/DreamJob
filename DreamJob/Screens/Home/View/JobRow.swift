@@ -9,11 +9,12 @@ import SwiftUI
 
 struct JobRow: View {
     let job: Job
+    var trailingIcon: String? = "bookmark" // Optional trailing icon (default: bookmark)
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {
-                Image(job.icon) // Placeholder for all
+                Image(job.icon)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)
@@ -33,11 +34,13 @@ struct JobRow: View {
 
                 Spacer()
 
-                Image(systemName: "bookmark")
-                    .foregroundColor(.gray)
+                // Optional trailing icon (bookmark or menu)
+                if let iconName = trailingIcon {
+                    Image(systemName: iconName)
+                        .foregroundColor(.gray)
+                }
             }
 
-            // Salary
             HStack {
                 Text(job.salary)
                     .font(.title3)
@@ -49,7 +52,6 @@ struct JobRow: View {
                     .foregroundColor(.gray)
             }
 
-            // Tags + Apply Button
             HStack {
                 ForEach(job.tags.prefix(2), id: \.self) { tag in
                     Text(tag)
@@ -82,6 +84,7 @@ struct JobRow: View {
         .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 4)
     }
 }
+
 
 
  
