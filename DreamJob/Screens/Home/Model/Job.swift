@@ -17,3 +17,9 @@ struct Job: Identifiable {
     let icon: String
 }
 
+struct Company: Identifiable {
+    let id = UUID()
+    let name: String
+    let followers: String
+    let imageName: String
+}

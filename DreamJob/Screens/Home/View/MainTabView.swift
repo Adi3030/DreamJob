@@ -17,7 +17,7 @@ struct MainTabView: View {
                 }
                 .tag(0)
 
-            SearchView()
+            FollowCompanyView()
                 .tabItem {
                     Image("reconnectUnSelect")
                     Text("Search")
@@ -31,7 +31,7 @@ struct MainTabView: View {
                 }
                 .tag(2)
 
-            FavoritesView()
+            MessageView()
                 .tabItem {
                     Image("chatUnSelect")
                     Text("Favorites")
