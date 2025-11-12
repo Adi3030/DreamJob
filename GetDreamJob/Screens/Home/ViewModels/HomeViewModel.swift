@@ -44,7 +44,7 @@ class HomeViewModel: ObservableObject {
         isLoading = true
         defer { isLoading = false }
         
-        let result: APIResult<UserProfile> = await apiService.fetch(endpoint: "https://dummyjson.com/c/b32d-04d9-4e6d-bf96")
+        let result: APIResult<UserProfile> = await apiService.fetch(endpoint: "https://dummyjson.com/c/dfe3-6e7e-47da-af8c")
         
         switch result {
         case .success(let user):
